@@ -14,14 +14,30 @@
 
 
     <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
     </ul>
 
 </head>
 
 <body>
+
     <p>Contact Form</p>
+    <form id="contact" method="POST" dtarget="U2FsdGVkX19A/uFpqn4fomAXO1uPnds1VfYGtQNNiZ05/u0uHJp6qtUGsdFNqwqQ3kh4eCLPE2KLCbLUl/7wnQ==">
+        <input type="text" name="name" placeholder="Your name"/>
+        <input type="text" name="email" placeholder="Your email"/>
+        <input type="submit" value="Send">
+    </form>
+
+    <script type="text/javascript">
+        function morphform(id) {
+            var form = document.getElementById(id);
+            form.action = CryptoJS.AES.decrypt(form.getAttribute("dtarget")).toString(CryptoJS.enc.Utf8);
+        }
+
+        morphform("contact");
+    </script>
+
 </body>
 
 </html>
