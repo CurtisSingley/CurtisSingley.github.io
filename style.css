@@ -33,6 +33,6 @@
         resize: vertical;
     }
      
-    button[type=submit]:hover {
+    /* button[type=submit]:hover {
         background-color: #45a049;
-    }
+    } */
