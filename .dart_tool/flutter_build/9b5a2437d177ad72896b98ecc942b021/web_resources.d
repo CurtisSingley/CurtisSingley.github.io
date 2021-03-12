@@ -1,0 +1,1 @@
+ build/web/index.html:  /home/mxsc/GithubProjects/CurtisSingley.github.io/web/index.html
