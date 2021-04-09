@@ -1,1 +1,0 @@
-# CurtisSingley.github.io
