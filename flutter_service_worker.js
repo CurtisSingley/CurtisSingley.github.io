@@ -5,13 +5,14 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "index.html": "51839f812a32cce7ac40ca488295da30",
 "/": "51839f812a32cce7ac40ca488295da30",
-"version.json": "240b90856e60f0645f97e0a3293eec61",
-"assets/NOTICES": "7f08b5d6c583cabda40558c44c579aab",
-"assets/AssetManifest.json": "3772086d3a586c69b10b4f49f3c45de0",
+"version.json": "56c6da5cea6bfb8247d16d5668202470",
+"assets/NOTICES": "bd60c5cf5fa24a4645b4726f22c7f019",
+"assets/AssetManifest.json": "38d32cb27cb0fb816c08fb1968b32ffd",
 "assets/assets/weatherAppScaled.png": "334d620684d30ee6aec2d04452ab00cb",
+"assets/assets/boidsea.gif": "c8277ef9a6c904a42212609e58af7087",
 "assets/assets/antialiasedPot.png": "23f6655d2504cab13dd68f1d42759bb1",
 "assets/FontManifest.json": "d751713988987e9331980363e24189ce",
-"main.dart.js": "bc31fc3a8bff178d6e449c7cedc7a884"
+"main.dart.js": "0abf14bbf33f436c55b7a7bf4fe0da57"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -29,7 +30,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
